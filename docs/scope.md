@@ -40,6 +40,7 @@ on the managed node:
 After the deployment, the administrator can do the following in the Telegram bot:
 
 - Issue a credential and a connection link
+- List the issued credentials
 - Revoke a credential
 - Rotate shortIds
 - Reboot the managed node; all services start again automatically
