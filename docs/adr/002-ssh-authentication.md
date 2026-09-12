@@ -87,4 +87,4 @@ end in the same state, so the playbook does not need to know which one was used.
 - Set `no_log: true` on every Ansible task that handles a secret.
 - Pin third party GitHub Actions by commit SHA.
 
-Related: [ADR-003](adr/003-bootstrap-model.md)
+Related: [ADR-003](003-bootstrap-model.md)

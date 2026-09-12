@@ -88,4 +88,4 @@ of strictness and get a playbook that is the same on every run.
 - Add a comment at the top of the first play: this is the only play that runs as
   `root`.
 
-Related: [ADR-002](adr/002-ssh-authentication.md)
+Related: [ADR-002](002-ssh-authentication.md)
