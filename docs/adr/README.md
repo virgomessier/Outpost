@@ -18,6 +18,7 @@ An ADR records one decision: why we made it, and what it costs.
 | [001](001-database-backup.md) | Do not build a backup system for SQLite in MVP | Accepted | 2026-08-14 | — |
 | [002](002-ssh-authentication.md) | SSH authentication for Ansible | Accepted | 2026-08-23 | — |
 | [003](003-bootstrap-model.md) | Bootstrap model: from a rented VPS to a managed node | Accepted | 2026-08-23 | — |
+| [004](004-xray-config-source-of-truth.md) | The source of truth lives in `config.json`, not in SQLite | Accepted | 2026-09-11 | — |
 
 This table is the only place that shows which decisions are in force. Update it in the
 same commit that adds or supersedes an ADR.
@@ -26,8 +27,6 @@ same commit that adds or supersedes an ADR.
 
 These need a decision. Each one is a candidate for the next record.
 
-- Source of truth for the Xray configuration. Does Outpost change Xray through the gRPC API,
-  or does it write a new config file and reload the service?
 - Hard delete or a disabled flag for a revoked credential.
 - Service accounts and privilege separation on the managed node.
 - Host-native, no Docker.
