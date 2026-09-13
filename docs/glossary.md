@@ -27,10 +27,10 @@ public key, shortId). The Xray community also calls it a share link or a VLESS U
 **Issue** (a link) — create a user, generate a credential, and return a connection
 link.
 
-**Revoke** — remove a credential from the database and from Xray so that its
-connection link stops working. Outpost deletes the credential instead of disabling
-it, so a revoke cannot be undone: the user needs a newly issued link. Revoking does
-not delete the old link from the user's device or from the chat history.
+**Revoke** — stop a credential from working. Outpost changes `config.json` and restarts
+Xray, so the connection link no longer opens a session. New connections fail at once; a
+connection that is already open continues until it closes on its own. Revoking does not
+delete the old link from the user's device or from the chat history.
 
 ## Proxy stack
 
@@ -90,11 +90,6 @@ GitHub Actions runner, not the user's computer.
 
 **Idempotent** — running the deployment twice produces the same result as running it
 once, and does not disturb a server that is already working.
-
-**Desired state** — the set of users and credentials that the database says must
-exist.
-
-**Reconciliation** — the process that makes the state of Xray match the desired state.
 
 ## Words Outpost does not use
 
