@@ -20,6 +20,12 @@ password and no interface. A user only receives a connection link.
 **Credential** — the secret that identifies one user to Xray. In the MVP profile this
 is a UUID. A credential belongs to exactly one user and never appears in logs.
 
+**Label** — the short name of one user in `config.json`. Xray calls this field `email`,
+but it is not an email address: any short string works. A label must be unique, and Xray
+compares labels without case. Outpost always sets a label, because Xray cannot remove a
+user that has none. The bot shows the label to the administrator, so a label should say
+who the user is.
+
 **Connection link** — the `vless://` URI that the bot sends to the administrator. It
 combines a credential with public server parameters (address, port, SNI, REALITY
 public key, shortId). The Xray community also calls it a share link or a VLESS URI.
@@ -102,6 +108,9 @@ configurations. Outpost does not have this feature. A single `vless://` URI is a
 
 **Account** — users have no login and no password, so they have no account. The word
 is *user*.
+
+**Email** — the `clients[].email` field in `config.json` is not an email address. It is
+a *label*. Use *email* only when quoting an Xray configuration field.
 
 **Client** — ambiguous: the Xray configuration calls user records `clients`, while
 people call their app a client. Use *user* for the person and *client app* for the
