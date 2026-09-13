@@ -20,7 +20,7 @@
 - XHTTP + TLS/IP certificates
 - AmneziaWG/WireGuard
 - Automatic update of connection links in client apps after a revoke or a new issue
-- Backup and restore of SQLite
+- Backup and restore of `config.json`
 - Nginx as a reverse proxy
 
 ## Definition of done
